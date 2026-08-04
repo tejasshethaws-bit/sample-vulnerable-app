@@ -17,9 +17,8 @@ Resources:
         Status: Enabled
       BucketEncryption:
         ServerSideEncryptionConfiguration:
-          - ServerSideEncryptionRule:
-              ServerSideEncryptionByDefault:
-                SSEAlgorithm: aws:kms
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: aws:kms
       ReplicationConfiguration:
         Role: !GetAtt ReplicationRole.Arn
         Rules:
